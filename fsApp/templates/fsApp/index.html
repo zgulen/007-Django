@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'fsApp/index.css' %}">
+    </head>
+    <body>
+        {{ request.user }}
+        <h1>this is fsApp index page</h1>
+        {{ caption | title }} <br />
+        <ul>
+            {% for i in mylist %} 
+            <li>{{ i }}</li>
+            {% endfor %}
+        </ul>
+        <!-- Burası bir karpuz tarlası -->
+        {# This is a comment line #}
+        {%comment%}
+        This is multi line
+        comment
+        {%endcomment%}
+    </body>
+</html>
